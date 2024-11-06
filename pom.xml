@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>MyWebApp</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging> <!-- WAR 파일로 패키징합니다. -->
+<dependencies>
+    <dependency>
+        <groupId>jakarta.servlet</groupId> <!-- 'jakarta.platform'이 아닌 'jakarta.servlet' 사용 -->
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>6.0.0</version> <!-- 사용하려는 버전에 맞게 수정 -->
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.oracle.database.jdbc</groupId>
+        <artifactId>ojdbc11</artifactId>
+        <version>21.1.0.0</version>
+    </dependency>
+</dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven WAR Plugin 설정 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <warName>MyWebApp</warName> <!-- WAR 파일 이름 설정 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

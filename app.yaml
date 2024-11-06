@@ -1,0 +1,6 @@
+runtime: java17  # 사용 중인 Java 버전에 맞게 수정
+instance_class: F1  # 필요에 따라 인스턴스 크기를 조정 가능
+
+handlers:
+  - url: /.*
+    script: this  # 모든 URL을 JSP 애플리케이션으로 연결
